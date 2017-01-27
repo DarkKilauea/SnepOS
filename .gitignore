@@ -27,6 +27,12 @@
 *.i*86
 *.x86_64
 *.hex
+*.iso
 
 # Debug files
 *.dSYM/
+
+# Build result directories
+bin/
+obj/
+isodir/
