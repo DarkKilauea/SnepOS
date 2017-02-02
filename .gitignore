@@ -30,3 +30,14 @@
 
 # Debug files
 *.dSYM/
+
+# Build directories
+bin/
+obj/
+iso/
+sysroot/
+
+# Build products
+*.iso
+*.kernel
+*.d
