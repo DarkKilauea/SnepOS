@@ -29,15 +29,10 @@ LIBK_CPPFLAGS:=$(LIBK_CPPFLAGS) $(KERNEL_ARCH_CPPFLAGS)
 
 FREEOBJS=\
 $(ARCH_FREEOBJS) \
-source/stdio/printf.o \
-source/stdio/putchar.o \
-source/stdio/puts.o \
-source/stdlib/abort.o \
-source/string/memcmp.o \
-source/string/memcpy.o \
-source/string/memmove.o \
-source/string/memset.o \
-source/string/strlen.o \
+$(patsubst %.c,%.o,$(wildcard source/ctype/*.c)) \
+$(patsubst %.c,%.o,$(wildcard source/stdio/*.c)) \
+$(patsubst %.c,%.o,$(wildcard source/stdlib/*.c)) \
+$(patsubst %.c,%.o,$(wildcard source/string/*.c)) \
 
 HOSTEDOBJS=\
 $(ARCH_HOSTEDOBJS) \
